@@ -43,8 +43,8 @@ namespace Tests
         [Test]
         public void TestSelect_null_odd()
         {
-            int[] arr = {  };
-            int[] expected = { };
+            IEnumerable<int> arr = new List<int>{  };
+            IEnumerable<int> expected = new List<int> { };
             Helper<int> helper = new Helper<int>();
             IEnumerable<int> selected = helper.Select(arr, x => x % 2 == 1);
             CollectionAssert.AreEqual(selected, expected);
